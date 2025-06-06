@@ -5,16 +5,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pagina inicial</title>
     <style>
+        /*reset o preenchimentos*/
         *{
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
-        
+        /*Troca a fonte de todo o corpo do site*/
         body{
             font-family: Arial, Helvetica, sans-serif;
         }
-        
+        /*Deixa organizado o menu superior*/
         .menu{
             list-style: none;/*Linpar os marcadores padrao da lista UL ou OL' vai tirar as bolinhas da lista*/
             display: flex;/*Permite que os elementos sejam organizados de maneira flexivel*/
@@ -27,16 +28,51 @@
             width: 100%;/*Faz com que o elemento oculpe 100% da largura da tela*/
             z-index: 1000;/*Garrante que os elementos fiquem  acima dos outro itens da tela*/
         }
+
+    /*Estilo dos items do menu */
+    .menu li{
+        position: relative;
+    }
+
+    .menu li a{
+        color: rgb(16, 119, 31);
+        text-decoration: none;
+        padding: 10px 20px;
+        display: block;
+    }
+
+    .menu li a:hover{
+        background-color: rgb(21, 97, 163);
+        color: rgb(187, 21, 21);
+    }
+
+    .menu li ul{
+        position: absolute;
+        top: 100%;
+        left: 0;
+        background-color: rgb(106, 168, 106);
+        display: none;
+        width: 100px;
+
+    }
     </style>
 </head>
 <body>
     <ul class="menu">
-        <li>Inicio</li>
-        <li>Sobre</li>
-        <li>Perfil</li>
-        <li>Contato</li>
+        <li>
+            <a href="#">Inicio</a>
+        <ul>
+            <li><a href="#">Compras</a></li>
+            <li><a href="#">Vendas</a></li>
+            <li><a href="#">Trocas</a></li>
+        </ul>
+        </li>
+        <li><a href="#">Sobre</a></li>
+        <li><a href="#">Perfil</a></li>
+        <li><a href="#">Contato</a></li>
         <li><a href="login.html">Conta</a></li>
      </ul>
 </nav>
 </body>
 </html>
+
